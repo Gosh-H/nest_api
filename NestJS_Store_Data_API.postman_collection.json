@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "nest-api-store-data",
+		"name": "NestJS Store Data API",
+		"description": "Collection for NestJS Store Data API endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Store Data - Database",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "StoreType",
+						"value": "db",
+						"type": "text",
+						"description": "Storage type: 'db' for database or 'file' for file storage"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"someString\": \"test string value\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/store",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"store"
+					]
+				},
+				"description": "Store data in database. Requires 'StoreType: db' header."
+			},
+			"response": []
+		},
+		{
+			"name": "Store Data - File",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "StoreType",
+						"value": "file",
+						"type": "text",
+						"description": "Storage type: 'db' for database or 'file' for file storage"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"someString\": \"test string value\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/store",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"store"
+					]
+				},
+				"description": "Store data in file. Requires 'StoreType: file' header."
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
+
