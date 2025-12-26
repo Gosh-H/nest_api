@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { StoreDataModule } from './store-data/store-data.module';
-import { NotifyModule } from './notify/notify.module';
-import { StoredData } from './store-data/entities/stored-data.entity';
+import { StoreDataModule } from './modules/store-data/store-data.module';
+import { NotifyModule } from './modules/notify/notify.module';
+import { StoredData } from './modules/store-data/entities/stored-data.entity';
 import { validate } from './config/env.validation';
 import { AppConstants, initializeConstants } from './config/constants';
 

@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 import * as admin from 'firebase-admin';
-import { AppConstants } from '../config/constants';
+import { AppConstants } from '../../config/constants';
 
 @Injectable()
 export class NotificationService {

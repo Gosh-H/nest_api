@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { StoredData } from '../entities/stored-data.entity';
 import { IStorageStrategy, SaveStringResult } from './interfaces/storage-strategy.interface';
-import { AppConstants } from '../../config/constants';
+import { AppConstants } from '../../../config/constants';
 
 @Injectable()
 export class DatabaseStrategy implements IStorageStrategy {
